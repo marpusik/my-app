@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Logo from "./components/logo/Logo";
+import Search from "./components/search/Search";
+import Button from "./components/button/Button";
+import Lang from "./components/lang/Lang";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Logo/>
+            <Search placeholder="Hello"/>
+            <Search placeholder="goodbye"/>
+            <div className="buttons">
+                <Button text="Поиск в Google!" style={{backgroundColor:"lightpink", width:"300px"}}/>
+                <Button text="Мне повезет!"/>
+            </div>
+            <Lang/>
+        </div>
+    );
 }
 
 export default App;
